@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Saludo Personalizados</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+        <button type="button" onclick="DARK()">Modo Escuro</button>
+        <form action="Saludar">
+            <h1>Login</h1>
+            <label for="entrada">Login: <input type="text" id="entrada" placeholder="Ingresar su login" required></label>
+        </label>
+        <button type="button" onclick="saludar()" id="btn" title="Saludar2">login</button>
+        <span id="resposta"></span>
+        <script>
+
+            let entrada = document.querySelector('input#entrada').value
+            let resposta = document.querySelector('span#resposta')
+
+            function saludar(){
+                
+                let entrada = document.querySelector('input#entrada').value;
+                
+
+
+                if (entrada.toLowerCase() == 'thiago' || entrada.toLowerCase()== 'juan' ){
+                    resposta.innerHTML = `<p> Usuário : ${entrada} -  Acesso liberado</p>`
+                }
+
+            }
+
+            function DARK(){
+                document.body.classList.toggle('dark-mode');
+            }
+        </script>
+</body>
+</html>
